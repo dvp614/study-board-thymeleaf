@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>hello5.html</title>
+</head>
+
+<body>
+	<h1>/templates/hello5.html</h1>
+	<hr>
+	
+	<h3>타임리프로 다중선택문(th:switch/th:case 속성이용) 생성하기</h3>
+	
+	<p th:with="gender=${true}">
+	
+		<span th:switch="${gender}">
+			<span th:case="true">남자입니다.</span>
+			<span th:case="false">여자입니다.</span>
+			<span th:case="*">누구세여</span>
+		</span>
+		
+	</p>
+</body>
+
+</html>

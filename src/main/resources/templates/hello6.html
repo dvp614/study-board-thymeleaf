@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>hello6.html</title>
+</head>
+
+<body>
+	<h1>/templates/hello6.html</h1>
+	<hr>
+	
+	<h3>타임리프에서 반복출현하는 모델속성명 생략하기(th:object)</h3>
+	
+	<p>
+		<span>이름 : [[ ${PERSON.name} ]]</span><br>
+		<span>나이 : [[ ${PERSON.age} ]]</span>
+	</p>
+	<hr>
+	
+	<p th:object="${PERSON}">
+		<span>이름1 : [[ *{name} ]]</span><br>
+		<span>나이1 : [[ *{age} ]]</span><br><br>
+		<span>이름2 : [[ *{getName()} ]]</span><br>
+		<span>나이2 : [[ *{getAge()} ]]</span>
+	</p>
+	
+</body>
+
+</html>
